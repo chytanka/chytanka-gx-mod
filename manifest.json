@@ -200,7 +200,7 @@
                 {
                     "id": "0",
                     "name": "Night light",
-                    "path": "shader/warm.txt"
+                    "path": "shader/warm.sksl"
                 }
             ],
             "theme": [
