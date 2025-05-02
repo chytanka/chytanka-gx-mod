@@ -1,0 +1,121 @@
+@layer tokens;
+
+:root {
+    --opera-back: env(-opera-gx-background-color);
+    --opera-accent: env(-opera-gx-accent-color);
+}
+
+@layer tokens {
+    :root {
+        --border-size: .5rem;
+        --border-size-s: calc(var(--border-size) /2);
+        --accent: oklch(from var(--opera-accent) l c h);
+        --surface: oklch(from var(--opera-back) 0.12 min(c, 0.0512) h);
+
+        --avarage-l: 0.48;
+        --avarage-c: 0.0256;
+        --avarage-l-shadow: 0.36;
+        --avarage-base: oklch(from var(--opera-accent) var(--avarage-l) var(--avarage-c) h);
+
+        --shadow-color: oklch(from var(--avarage, var(--avarage-base)) var(--avarage-l-shadow) c h);
+        --shadow-distance: var(--border-size);
+        --shadow-distance-2: calc(var(--border-size) *2);
+
+        --radius: 0.5rem;
+        --border-size: 0.25rem;
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --avarage-c: 0.032;
+            --avarage-l: 0.84;
+            --avarage-l-shadow: 0.72;
+            --surface: oklch(from var(--opera-back) 1 min(c, 0.0256) h);
+
+            --text: black;
+        }
+    }
+
+    :root {
+        --flat-shadow-medium: 1px 1px var(--surface), var(--shadow-distance) var(--shadow-distance) var(--shadow-color);
+        --flat-shadow-high: 1px 1px var(--surface), var(--shadow-distance-2) var(--shadow-distance-2) var(--shadow-color);
+
+        --card-surface: var(--avarage, var(--avarage-base)) radial-gradient(oklch(from var(--shadow-color) l c h) 1px, transparent 0px) center / 7px 7px repeat;
+    }
+}
+
+:root {
+    --chroma: .0144;
+    --chroma: var(--avarage-c);
+    /* --accent: oklch(from var(--opera-accent) l c h); */
+    --accent-h30: oklch(from var(--opera-accent) l c calc(h + 30));
+    --accent-h60: oklch(from var(--opera-accent) l c calc(h + 60));
+    --accent-h90: oklch(from var(--opera-accent) l c calc(h + 90));
+    --accent-h120: oklch(from var(--opera-accent) l c calc(h + 120));
+    --accent-h150: oklch(from var(--opera-accent) l c calc(h + 150));
+    --accent-h180: oklch(from var(--opera-accent) l c calc(h + 180));
+
+    --accent-10: oklch(from var(--opera-accent) .2 var(--chroma) h);
+    --accent-50: oklch(from var(--opera-accent) .5 var(--chroma) h);
+
+    /* --surface: oklch(from var(--opera-back) .12 min(c, .032) h); */
+    --surface-2: oklch(from var(--opera-back) .18 var(--chroma) h);
+    --surface-3: oklch(from var(--surface-2) calc(l + .16) c h);
+
+    --surface-accent: oklch(from var(--opera-accent) min(.7, l) c h);
+
+    --surface-avarage: oklch(from var(--accent) 25% min(0.0512, c) h);
+
+
+    --text: white;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --accent-10: oklch(from var(--opera-accent) .82 var(--chroma) h);
+        --surface-avarage: oklch(from var(--accent) 75% min(0.0512, c) h);
+
+        /* --surface: oklch(from var(--opera-back) 1 min(c, .032) h); */
+        --surface-2: oklch(from var(--opera-back) .92 var(--chroma) h);
+        --surface-3: oklch(from var(--surface-2) .96 c h);
+        --text: black;
+    }
+}
+
+:root {
+    /* --radius: 1ch; */
+    --radius-s: calc(var(--radius) /2);
+    --min-card-width: 192px;
+    --blur: 1ch;
+    --t: .133333334s;
+
+    --gap: var(--radius);
+    --gap-s: calc(var(--radius) /2);
+    --gap-2: calc(var(--radius) *2);
+    --gap-3: calc(var(--radius) *3);
+    --gap-4: calc(var(--radius) *4);
+
+    color: var(--text) !important;
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --l: .72;
+    }
+}
+
+.bg-background {
+    background: var(--accent-10) !important;
+}
+
+.md-modal__box {
+    border-radius: var(--radius) !important;
+    box-shadow: var(--flat-shadow-high) !important;
+    border: 2px solid var(--accent) !important;
+
+    & img.rounded.shadow-lg.width-limit.self-start {
+        border: 1px solid var(--accent) !important;
+        box-shadow: var(--flat-shadow-medium) !important;
+    }
+}

@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+    width: 4px !important;
+    height: 4px !important;
+    border-radius: 0 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent) !important;
+    border: none !important;
+    border-radius: 2px !important;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+::-webkit-scrollbar-track {
+    background: unset !important;
+}
+
+::selection {
+    background: var(--accent) !important;
+    color: var(--surface) !important;
+}

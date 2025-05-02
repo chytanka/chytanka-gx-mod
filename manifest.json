@@ -1,0 +1,240 @@
+{
+    "name": "Chytanka",
+    "description": "Chytanka mod for Opera GX",
+    "developer": {
+        "name": "rodzyk"
+    },
+    "icons": {
+        "512": "icon_512.png"
+    },
+    "manifest_version": 3,
+    "mod": {
+        "license": "license.txt",
+        "payload": {
+            "background_music": [
+                {
+                    "id": "music_0",
+                    "name": "Stay With Ukraine",
+                    "author": "Rockot",
+                    "tracks": [
+                        "music/stay-with-ukraine-173511.mp3"
+                    ]
+                },
+                {
+                    "id": "music_1",
+                    "name": "Hutsul Havoc (Ethno-Action Ukrainian Soundtrack)",
+                    "author": "Rockot",
+                    "tracks": [
+                        "music/hutsul-havoc-ethno-action-ukrainian-soundtrack-192015.mp3"
+                    ]
+                }
+            ],
+            "wallpaper": [
+                {
+                    "id": "0",
+                    "name": "Books II by vV-ave",
+                    "dark": {
+                        "groups": [
+                            {
+                                "layers": [
+                                    {
+                                        "options": {
+                                            "blend_mode": "normal",
+                                            "grayscale": false
+                                        },
+                                        "resource": "wallpaper/books_ii_by_vv_ave_dgc25ib.png",
+                                        "type": "image"
+                                    }
+                                ],
+                                "shader": {
+                                    "path": "shader/vignette.sksl"
+                                }
+                            }
+                        ],
+                        "preview": {
+                            "176x124": "wallpaper/books_ii_by_vv_ave_dgc25ib-preview.jpg"
+                        },
+                        "speeddial_position": "left",
+                        "text_color": "#ffffff",
+                        "text_shadow": "#166496",
+                        "ui_settings": {
+                            "background_blur": 32,
+                            "background_opacity": 0,
+                            "focus_mode": false,
+                            "islands_opacity": 48,
+                            "vignette_strength": 16
+                        }
+                    }
+                },
+                {
+                    "id": "2",
+                    "name": "FIELD OF THORNS - INSOMNIA by Caisne",
+                    "dark": {
+                        "groups": [
+                            {
+                                "layers": [
+                                    {
+                                        "options": {
+                                            "blend_mode": "normal",
+                                            "grayscale": false
+                                        },
+                                        "resource": "wallpaper/field_of_thorns___insomnia_by_caisne_d8qubs9.jpg",
+                                        "type": "image"
+                                    }
+                                ],
+                                "shader": {
+                                    "path": "shader/vignette.sksl"
+                                }
+                            }
+                        ],
+                        "preview": {
+                            "176x124": "wallpaper/field_of_thorns___insomnia_by_caisne_d8qubs9-preview.jpg"
+                        },
+                        "speeddial_position": "left",
+                        "text_color": "#ffffff",
+                        "text_shadow": "#166496",
+                        "ui_settings": {
+                            "background_blur": 32,
+                            "background_opacity": 0,
+                            "focus_mode": false,
+                            "islands_opacity": 48,
+                            "vignette_strength": 16
+                        }
+                    }
+                },
+                {
+                    "id": "3",
+                    "name": "A cozy night to lament on things by TomTC",
+                    "dark": {
+                        "groups": [
+                            {
+                                "layers": [
+                                    {
+                                        "options": {
+                                            "blend_mode": "normal",
+                                            "grayscale": false
+                                        },
+                                        "resource": "wallpaper/a_cozy_night_to_lament_on_things_by_tomtc_dd0z0rj.jpg",
+                                        "type": "image"
+                                    }
+                                ],
+                                "shader": {
+                                    "path": "shader/vignette.sksl"
+                                }
+                            }
+                        ],
+                        "preview": {
+                            "176x124": "wallpaper/a_cozy_night_to_lament_on_things_by_tomtc_dd0z0rj-preview.jpg"
+                        },
+                        "speeddial_position": "top",
+                        "text_color": "#ffffff",
+                        "text_shadow": "#166496",
+                        "ui_settings": {
+                            "background_blur": 32,
+                            "background_opacity": 0,
+                            "focus_mode": false,
+                            "islands_opacity": 48,
+                            "vignette_strength": 16
+                        }
+                    }
+                }
+            ],
+            "app_icon": [
+                {
+                    "id": "ch_icon_01",
+                    "name": "Chytanka GX",
+                    "path": "app_icon/ch-gx-icon.png"
+                }
+            ],
+            "fonts": [
+                {
+                    "body": {
+                        "name": "Shantell Sans",
+                        "variants": [
+                            {
+                                "path": "font/ShantellSans-Regular.ttf"
+                            }
+                        ]
+                    },
+                    "header": {
+                        "name": "Troubleside",
+                        "variants": [
+                            {
+                                "path": "font/Troubleside.ttf"
+                            }
+                        ]
+                    },
+                    "id": "fonts_01",
+                    "name": "Chytanka Troubleside"
+                }
+            ],
+            "page_styles": [
+                {
+                    "id": "mangainua",
+                    "name": "mangainua",
+                    "css": [
+                        "webmodding/common/base.css",
+                        "webmodding/common/scrollbar.css",
+                        "webmodding/mangainua/card.css",
+                        "webmodding/mangainua/text.css",
+                        "webmodding/mangainua.css"
+                    ],
+                    "matches": [
+                        "https://manga.in.ua/*"
+                    ]
+                },
+                {
+                    "id": "mangadex",
+                    "name": "mangadex",
+                    "css": [
+                        "webmodding/common/base.css",
+                        "webmodding/common/scrollbar.css",
+                        "webmodding/mangadex.css"
+                    ],
+                    "matches": [
+                        "https://*.mangadex.org/*"
+                    ]
+                }
+            ],
+            "shaders": [
+                {
+                    "id": "0",
+                    "name": "Night light",
+                    "path": "shader/warm.txt"
+                }
+            ],
+            "theme": [
+                {
+                    "dark": {
+                        "gx_accent": {
+                            "h": 50,
+                            "s": 100,
+                            "l": 52
+                        },
+                        "gx_secondary_base": {
+                            "h": 203,
+                            "s": 100,
+                            "l": 13
+                        }
+                    },
+                    "id": "0",
+                    "name": "Chytanka GX",
+                    "light": {
+                        "gx_accent": {
+                            "h": 203,
+                            "s": 74,
+                            "l": 34
+                        },
+                        "gx_secondary_base": {
+                            "h": 210,
+                            "s": 36,
+                            "l": 96
+                        }
+                    }
+                }
+            ]
+        },
+        "schema_version": 2
+    },
+    "version": "1.0"
+}

@@ -1,0 +1,21 @@
+uniform shader iChunk;
+uniform float2 iChunkSize;
+uniform float2 iChunkOffset;
+uniform float2 iContentSize;
+uniform float2 iMouse;
+
+half4 main(float2 xy) {
+  // Отримуємо піксель з оригінального зображення
+  half4 color = iChunk.eval(xy);
+  
+  // Зменшуємо яскравість зображення для створення темного ефекту
+  // float brightnessFactor = 0.7;  // зменшуємо яскравість на 30%
+  // color.rgb *= brightnessFactor;
+  
+  // Зміщуємо кольори у тепліші тони (зменшуємо синій колір, збільшуємо червоний та зелений)
+  half3 warmShift = half3(1.0, 1.0, 0.72);  // Менше синього, більше червоного і зеленого
+  color.rgb *= warmShift;
+  
+  // Повертаємо змінений колір
+  return color;
+}

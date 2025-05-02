@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Troubleside;
+    src: url("https://cdn.jsdelivr.net/gh/chytanka/chytanka.github.io/src/assets/fonts/Troubleside.ttf");
+    font-display: swap;
+}
+
+:root {
+    font-size: clamp(0.875rem, 0.8214285714285714rem + 0.2380952380952381vw, 1rem) !important;
+    line-height: 1.3;;
+}
+
+:root {
+    --text-size-xxs: 0.64rem;
+    --text-size-xs: 0.88rem;
+    --text-size-sm: 0.94rem;
+    --text-size-md: 1rem;
+    --text-size-h6: 1.07rem;
+    --text-size-h6: 1.14rem;
+    --text-size-h4: 1.21rem;
+    --text-size-h3: 1.3rem;
+    --text-size-h2: 1.38rem;
+    --text-size-h1: 1.48rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Troubleside !important;
+}
+
+h1 b {
+    font-size: unset !important;
+}
+
+.title__h {
+    font-size: var(--text-size-h1) !important;
+    line-height: unset !important;
+    margin-bottom: unset !important;
+}
+
+.title__h1 {
+    font-size: var(--text-size-h1) !important
+}
+
+.title__h2 {
+    font-size: var(--text-size-h2) !important;
+}
+
+.title__h3 {
+    font-size: var(--text-size-h3) !important
+}
+
+.title__h4 {
+    font-size: var(--text-size-h4) !important
+}
+
+.title__h5 {
+    font-size: var(--text-size-h5) !important
+}
+
+h1.slider__title {
+    margin: calc(var(--radius)) 0 0;
+    color: var(--accent) !important;
+}
+
+.tab__nav ul li h1 {
+    color: var(--accent) !important;
+    font-size: var(--text-size-h1) !important;
+    font-weight: normal !important;
+}
+
+.content__title,
+.item__full-title h1,
+.item__full-main--progression-title,
+.item__full-main--container .item__full-sidebar--sub {
+    font-family: Troubleside !important;
+    padding-top: unset !important;
+    color: var(--accent) !important;
+    font-weight: normal !important;
+}
+
+.slider__title,
+.content__title,
+.item__full-title h1 {
+    font-size: var(--text-size-h1) !important;
+}
+
+.item__full-main--progression-title,
+.item__full-main--container .item__full-sidebar--sub {
+    font-size: var(--text-size-h4) !important;
+}
+
+#sidebar-fav-list h3 {
+    color: var(--accent) !important;
+    margin-bottom: var(--radius);
+    font-weight: normal !important;
+}
+
+h3.card__title {
+    font-size: var(--text-size-h3) !important;
+    font-weight: normal !important;
+}
+
+#reverse-list {
+    font-weight: normal !important;
+}

@@ -1,0 +1,205 @@
+#site-content:has(.card__cover) {
+    display: grid !important;
+    gap: 1.5rem !important;
+    grid-template-columns: repeat(auto-fill, minmax(var(--min-card-width), 1fr)) !important;
+    perspective: 4000px;
+}
+
+#site-content .col-6 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+#site-content .col-xl-2 {
+    max-width: unset !important;
+}
+
+.card__cover figure,
+.card__cover figure img,
+.footer .block_youwatched article.short-item_watched .poster-img_watched,
+.footer .block_youwatched article.short-item_watched .poster-img_watched img,
+.slider article.item .card.card--big header figure,
+.slider article.item .card.card--big header figure img {
+    aspect-ratio: 257 / 364 !important;
+    object-fit: cover !important;
+    border-radius: calc(var(--radius) - var(--border-size));
+}
+
+.ac-item-cover {
+    aspect-ratio: 257 / 364 !important;
+    height: unset !important;
+}
+
+.ac-result-list li a {
+    border: 1px solid var(--shc2) !important;
+    padding: unset !important;
+    border-radius: var(--radius) !important;
+}
+
+.progress__box .progress__sm{
+    background-color: oklch(from var(--avarage, var(--avarage-base)) l c h / .8)
+}
+
+.footer .block_youwatched article.short-item_watched,
+.slider article.item .card.card--big,
+#site-content .col-6.col-sm-4.col-lg-3.col-xl-2.movie:has(.card.card--big) {
+    --y: 0;
+
+    border: var(--border-size) solid var(--avarage, var(--avarage-base)) !important;
+    box-shadow: 1px 1px var(--surface), var(--shadow-distance) var(--shadow-distance) var(--shadow-color) !important;
+    background-color: var(--avarage, var(--avarage-base)) !important;
+    background-image: radial-gradient(oklch(from var(--shadow-color) l c h) 1px,
+            transparent 0px) !important;
+    background-repeat: repeat !important;
+    background-size: 7px 7px !important;
+    background-position: center !important;
+
+    padding: 0 !important;
+    border-radius: var(--radius) !important;
+    overflow: hidden !important;
+    opacity: min(var(--item-scale), .8);
+    transform: rotate(var(--deg, .8deg)) translateY(var(--y)) scale(var(--item-scale)) rotateX(var(--item-angle));
+    transition: all var(--t) ease-in-out;
+    will-change: transform;
+    transform-style: preserve-3d;
+    color: inherit !important;
+
+    & .card__title {
+        font-size: var(--text-size-md) !important;
+        margin: unset !important;
+    }
+
+    & .card__category a {
+        text-transform: unset !important;
+        font-size: var(--text-size-xs) !important;
+    }
+
+    & .status_news_today,
+    & .status_news_yesterday {
+        color: white !important;
+        background: var(--surface-accent) !important;
+        padding: var(--gap) !important;
+        font-size: var(--text-size-xxs) !important;
+        text-transform: unset !important;
+        font-weight: bold !important;
+    }
+
+    & .status_news_yesterday {
+        background: var(--surface-2) !important;
+        color: inherit !important;
+    }
+}
+
+
+.card__content {
+    background: unset !important;
+    color: inherit !important;
+}
+
+.header__sign-in span,
+.nav-show-notification i,
+.header__search-btn,
+.header__message-btn {
+    color: var(--accent) !important;
+    opacity: .8;
+}
+
+.header__sign-in span:hover,
+.nav-show-notification i:hover,
+.header__search-btn:hover,
+.header__message-btn:hover {
+    opacity: 1;
+}
+
+
+.footer .block_youwatched article.short-item_watched:nth-child(2n+1),
+.slider .owl-item:nth-child(2n+1) article.item .card.card--big,
+#site-content .col-6.col-sm-4.col-lg-3.col-xl-2.movie:has(.card.card--big):nth-child(2n+1) {
+    --deg: -.8deg;
+}
+
+.footer .block_youwatched article.short-item_watched:nth-child(3n),
+.slider .owl-item:nth-child(3n) article.item .card.card--big,
+#site-content .col-6.col-sm-4.col-lg-3.col-xl-2.movie:has(.card.card--big):nth-child(3n) {
+    --deg: .6deg;
+}
+
+.footer .block_youwatched article.short-item_watched:nth-child(4n+1),
+.slider .owl-item:nth-child(4n+1) article.item .card.card--big,
+#site-content .col-6.col-sm-4.col-lg-3.col-xl-2.movie:has(.card.card--big):nth-child(4n+2) {
+    --deg: -.75deg;
+}
+
+.footer .block_youwatched article.short-item_watched:nth-child(5n),
+.slider .owl-item:nth-child(5n) article.item .card.card--big,
+#site-content .col-6.col-sm-4.col-lg-3.col-xl-2.movie:has(.card.card--big):nth-child(5n) {
+    --deg: 0.25deg;
+}
+
+.footer .block_youwatched article.short-item_watched:nth-child(6n+1),
+.slider .owl-item:nth-child(6n+1) article.item .card.card--big,
+#site-content .col-6.col-sm-4.col-lg-3.col-xl-2.movie:has(.card.card--big):nth-child(6n+3) {
+    --deg: -0.3deg;
+}
+
+.footer .block_youwatched article.short-item_watched:nth-child(7n),
+.slider .owl-item:nth-child(7n) article.item .card.card--big,
+#site-content .col-6.col-sm-4.col-lg-3.col-xl-2.movie:has(.card.card--big):nth-child(7n) {
+    --deg: .9deg;
+}
+
+
+.footer .block_youwatched article.short-item_watched:hover,
+.slider article.item .card.card--big:hover,
+#site-content .col-6.col-sm-4.col-lg-3.col-xl-2.movie:has(.card.card--big):hover {
+    opacity: 1;
+    --deg: 0 !important;
+    --y: -1rem;
+    --shadow-distance: calc(var(--border-size) * 2);
+}
+
+@supports (animation-timeline: view()) {
+    #site-content .col-6.col-sm-4.col-lg-3.col-xl-2.movie:has(.card.card--big) {
+        animation: shrink-top both ease-in-out, shrink-bottom both ease-in-out reverse;
+        animation-timeline: view(block);
+        animation-range: entry, exit;
+    }
+}
+
+@property --item-scale {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 1;
+}
+
+@property --item-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+@keyframes shrink-top {
+    0% {
+        --item-scale: .5;
+        --item-angle: -60deg;
+        transform-origin: top
+    }
+}
+
+@keyframes shrink-bottom {
+    0% {
+        --item-scale: .5;
+        --item-angle: 60deg;
+        transform-origin: bottom
+    }
+}
+
+.animebox-poster_watched {
+    margin: 0 !important;
+}
+
+.title_watched {
+    font-size: var(--text-size-sm) !important;
+    padding: .25rem .5rem !important;
+    text-align: left !important;
+}
